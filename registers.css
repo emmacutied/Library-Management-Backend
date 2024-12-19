@@ -1,0 +1,124 @@
+/* register.css */
+/* Body */
+body {
+    font-family: 'Josefin Sans', sans-serif; /* Sets the font for the page */
+    margin: 0; /* Removes default margin */
+    padding: 80px; /* Adds padding around the body */
+    display: flex; /* Enables Flexbox layout for centering */
+    justify-content: center; /* Centers flex items horizontally */
+    align-items: center; /* Centers flex items vertically */
+    min-height: 100vh; /* Ensures the body takes full viewport height */
+    background-image: url('images/BG2.png');
+    background-size: cover; /* Ensures background image covers entire viewport */
+    background-repeat: no-repeat;
+    background-position: center; /* Centers background image */
+    background-color: #f6f8e1; /* Fallback color */
+
+    /* Fade-in animation */
+    opacity: 0; /* Starts invisible */
+    animation: fadeInBackground 2s ease-in-out forwards;
+}
+
+/* Form container */
+.form-container {
+    background-color: #5f643b; /* Sets background color of the login form */
+    padding: 40px; /* Adds padding around the content inside the container */
+    border-radius: 20px; /* Rounds the corners of the login form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+    text-align: center; /* Centers text within the form */
+    width: 600px; /* Sets a fixed width for the form */
+    max-width: 90%; /* Allows responsive behavior */
+
+    /* Slide-up and fade-in animation */
+    opacity: 0; /* Starts invisible */
+    transform: translateY(50px); /* Starts slightly below */
+    animation: slideUpFadeIn 1.5s ease-out forwards; /* Slide-up and fade-in */
+    animation-delay: 1s; /* Delays the form animation */
+}
+
+/* Keyframes for body fade-in */
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for form slide-up and fade-in */
+@keyframes slideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Starts below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Ends at final position */
+    }
+}
+
+
+
+h2 {
+    margin-bottom: 20px; /* Adds space below the heading */
+    font-size: 2.5em; /* Sets font size for the heading */
+    color: #f6f8e1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 500px; /* Makes input fields stretch to full width */
+    padding: 15px; /* Adds padding inside input fields */
+    margin-bottom: 10px; /* Adds space below input fields */
+    border-radius: 10px; /* Rounds the corners of input fields */
+    background-color: rgb(171, 216, 212); /* Sets background color for input fields */
+    border: 1px solid #300a3f; /* Sets border for input fields */
+    font-size: 1em; /* Sets font size for input fields */
+    color: rgb(0, 0, 0); /* Sets text color for input fields */
+}
+
+input[type="submit"] {
+    margin: 0 0 10px;
+    width: 100%; /* Makes the submit button stretch to full width */
+    padding: 15px; /* Adds padding inside the button */
+    border-radius: 10px; /* Rounds the corners of the button */
+    background-color: #03fc94; /* Sets background color for the button */
+    color: rgb(0, 0, 0); /* Sets text color for input fields */
+    border: none; /* Removes default border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 1.2em; /* Sets font size for the button */
+}
+
+button[type="button"] {
+    margin: 0 0 10px;
+    width: 100%; /* Makes the submit button stretch to full width */
+    padding: 15px; /* Adds padding inside the button */
+    border-radius: 10px; /* Rounds the corners of the button */
+    background-color: #03fc94; /* Sets background color for the button */
+    color: #fff; /* Sets text color for the button */
+    border: none; /* Removes default border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 1.2em; /* Sets font size for the button */
+}
+
+input[type="submit"]:hover {
+    background-color: #bb8d05; /* Changes background color on hover */
+}
+
+button[type="button"]:hover {
+    background-color: #bb8d05; /* Changes background color on hover */
+}
+
+select {
+    width: 532px; /* Makes the select element stretch to full width */
+    padding: 15px; /* Adds padding inside the select element */
+    margin-bottom: 10px; /* Adds space below the select element */
+    border-radius: 10px; /* Rounds the corners of the select element */
+    background-color: rgb(171, 216, 212); /* Sets background color for the select element */
+    border: 1px solid #300a3f; /* Sets border for the select element */
+    color: rgb(8, 41, 70); /* Sets text color for the select element */
+    font-size: 1em; /* Sets font size for the select element */
+}
+

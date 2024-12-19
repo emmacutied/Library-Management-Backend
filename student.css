@@ -1,0 +1,413 @@
+/* Reset and General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: bisque;/* Match Admin Dashboard background */
+    height: 100vh; /* Ensure body takes full height */
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a310a; /* Match Admin Dashboard color */
+    color: #03fc20;
+    padding: 10px 20px; /* Adjust padding */
+    width: 100%;
+}
+
+.header h1 {
+    font-size: 1.5em;
+    margin: 0; /* Remove default margin */
+}
+
+/* User Info */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info span {
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.user-icon {
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 40px; /* Position below user icon */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Container and Sidebar */
+.container {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    height: calc(100vh - 40px); /* Calculate height considering header space */
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 350px; /* Match Admin Sidebar width */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Space between sidebar and content */
+    height: 150%; /* Make sidebar take full height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Manage Widget Styles */
+.manage-widget {
+    flex: 1; /* Make the manage widget take available space */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between manage widget and other content */
+}
+
+.manage-widget h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em; /* Increase font size for visibility */
+    text-align: center;
+    color: #333; /* Darker color for header */
+}
+
+.manage-widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.manage-widget li {
+    margin: 40px 0;
+}
+
+.manage-widget a {
+    display: block;
+    padding: 15px;
+    background-color: #5f643b; /* Change color to match Admin Dashboard */
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.manage-widget a:hover {
+    background-color: #31b0d5; /* Darker shade for hover */
+}
+
+/* Dashboard Content */
+.dashboard {
+    display: flex;
+    flex: 1; /* Allow dashboard to fill the available space */
+}
+
+.dashboard-content {
+    flex: 1; /* Allow content to fill the remaining space */
+}
+
+.manage-widget {
+    flex: 1; /* Make the manage widget take available space */
+}
+
+
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%; /* Full width */
+  
+}
+
+.stat1, .stat2, .stat3 {
+    padding-top: 100px;
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px; /* Space between stats */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 150px 100px;
+    background-color: white;
+}
+
+.stat1 {
+    background-image: url('images/Total_Categories-removebg-preview.png');
+}
+
+.stat2 {
+    background-image: url('images/Total_Categories-removebg-preview.png');
+}
+
+.stat3 {
+    background-image: url('images/Total_Categories-removebg-preview.png');
+}
+
+h2{
+    color: #03fc20;
+}
+
+.stat p {
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+/* Books Section */
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 90px; /* Space between each book item, adjust as needed */
+    margin: 15px auto; /* Center align the entire grid container and space around */
+    width: 110%; /* Optional: Limit width for better alignment */
+}
+
+/* Book card style */
+.book {
+    padding: 50px; /* Content spacing inside the book card */
+    margin: 10px; /* Extra space around each book card */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 140%; /* Let grid control the size */
+    transition: transform 0.3s ease;
+}
+
+.book h4{
+    margin: 10px 0;
+    font-size: 20px;
+    color: #03fc20;
+    
+}
+
+.book p{
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+
+.compressed-text {
+    white-space: nowrap; /* Prevents text wrapping to new lines */
+    overflow: hidden;    /* Hides overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
+    max-width: 100%;     /* Adjust width as needed for compression */
+}
+
+
+
+/* Dropdown Toggle */
+.user-icon:hover + .dropdown,
+.dropdown:hover {
+    display: block;
+}
+
+/* Button Styles */
+.btn {
+    padding: 8px 16px;
+    background-color: #5cb85c; /* Match Admin button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #4cae4c; /* Darker shade for hover */
+}
+
+.book.category-bg-1 {
+    background-image: url('images/CLASSICS.png'); /* Example color for category 1 */
+    background-position: center;
+    margin-bottom: 0px;
+    background-repeat: no-repeat;
+    width: 200px; /* Width based on classic book size */
+    height: 200px; /* Height based on classic book size */
+    overflow: hidden; /* Ensure content fits within the book area */
+    /* Keep any existing padding, border, or other styles for design */
+    transition: transform 0.3s ease;
+}
+
+.book.category-bg-2{
+    background-image: url('images/FANTASY.png');
+    background-position: center;
+    margin-bottom: 0px;
+    background-repeat: no-repeat;
+    width: 200px; /* Width based on classic book size */
+    height: 200px; /* Height based on classic book size */
+    overflow: hidden; /* Ensure content fits within the book area */
+    /* Keep any existing padding, border, or other styles for design */
+}
+
+.book.category-bg-3 {
+    background-image: url('images/FICTION.png');
+    background-position: center;
+    margin-bottom: 0px;
+    background-repeat: no-repeat;
+    width: 200px; /* Width based on classic book size */
+    height: 200px; /* Height based on classic book size */
+    overflow: hidden; /* Ensure content fits within the book area */
+    /* Keep any existing padding, border, or other styles for design */
+}
+
+.book.category-bg-4 {
+    background-image: url('images/PHILOSOPHY.png');
+    background-position: center;
+    margin-bottom: 0px;
+    background-repeat: no-repeat;
+    width: 200px; /* Width based on classic book size */
+    height: 200px; /* Height based on classic book size */
+    overflow: hidden; /* Ensure content fits within the book area */
+    /* Keep any existing padding, border, or other styles for design */
+   
+}
+
+.book.category-bg-5 {
+    background-image: url('images/BIOGRAPHY1.png');
+    background-position: center;
+    margin-bottom: 0px;
+    background-repeat: no-repeat;
+    width: 200px; /* Width based on classic book size */
+    height: 200px; /* Height based on classic book size */
+    overflow: hidden; /* Ensure content fits within the book area */
+    /* Keep any existing padding, border, or other styles for design */
+   
+}
+
+.book.category-bg-6 {
+    background-image: url('images/HISTORY1.png');
+    margin-bottom: 0px;
+    background-repeat: no-repeat;
+    width: 200px; /* Width based on classic book size */
+    height: 200px; /* Height based on classic book size */
+    overflow: hidden; /* Ensure content fits within the book area */
+    /* Keep any existing padding, border, or other styles for design */
+}
+
+.book:hover{
+    transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Devices (up to 768px) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
+        margin-right: 0; /* Remove the right margin */
+        height: auto; /* Remove the fixed height */
+    }
+
+    .stats {
+        flex-direction: column; /* Stack stats vertically */
+    }
+
+    .stat1, .stat2, .stat3 {
+        margin-bottom: 20px; /* Add space between stats */
+        width: 100%; /* Full width */
+    }
+
+    .books {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* Adjust grid columns for smaller screens */
+        gap: 10px;
+    }
+
+    .book {
+        width: 100%; /* Ensure the book cards take full width */
+    }
+
+    .header h1 {
+        font-size: 1.2em; /* Adjust the font size for header */
+    }
+
+    .manage-widget h2 {
+        font-size: 1.2em; /* Adjust the font size for widget header */
+    }
+}
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 1.1em; /* Smaller font for mobile header */
+    }
+
+    .container {
+        padding: 5px; /* Reduced padding */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+    }
+
+    .stats {
+        flex-direction: column; /* Stack stats vertically */
+        align-items: center;
+    }
+
+    .stat1, .stat2, .stat3 {
+        margin-bottom: 10px;
+        width: 100%; /* Full width for stats */
+    }
+
+    .book {
+        padding: 20px; /* Reduce padding in book cards */
+        width: 100%;
+    }
+
+    .books {
+        grid-template-columns: 1fr; /* Stack books in one column */
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .books {
+       grid-template-columns: 1fr;
+       gap: 20px; /* More spacing on smaller screens */
+    }
+ }
+ 

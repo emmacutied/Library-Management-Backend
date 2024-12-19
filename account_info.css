@@ -1,0 +1,65 @@
+/* Header styling */
+.header {
+    background-color: bisque;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Container styling for the account info */
+.container {
+    width: 50%;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+td {
+    color: #333;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+
+button[type="BACK"] {
+    display: block;
+    justify-content: center;
+    margin: 0 0 10px;
+    width: 10%; /* Makes the submit button stretch to full width */
+    padding: 10px; /* Adds padding inside the button */
+    border-radius: 10px; /* Rounds the corners of the button */
+    background-color: #172b64; /* Sets background color for the button */
+    color: #fff; /* Sets text color for the button */
+    border: none; /* Removes default border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 1.2em; /* Sets font size for the button */
+} 
